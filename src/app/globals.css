@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-blue: #00d2ff;
+  --accent-gold: #ffcc00;
+  --accent-white: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-mono);
+  --font-orbitron: var(--font-orbitron);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #000000;
+  color: var(--text-color);
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Interstellar Cinematic Text */
+.cinematic-text {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 200;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hud-border {
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+}
+
+.glitch-hover:hover {
+  animation: jitter 0.1s infinite;
+}
+
+@keyframes jitter {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(1px, -1px);
+  }
+
+  50% {
+    transform: translate(-1px, 1px);
+  }
+
+  75% {
+    transform: translate(1px, 1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 210, 255, 0.5);
+  border-radius: 2px;
+}
+
+/* HUD Pulse */
+.hud-pulse {
+  animation: hud-pulse 2s infinite ease-in-out;
+}
+
+@keyframes hud-pulse {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Shining Effect for High-Tech Buttons */
+.shining-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shining-effect::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 50%;
+  height: 300%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: rotate(35deg);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shining-effect:hover::after {
+  left: 150%;
+  opacity: 1;
 }
