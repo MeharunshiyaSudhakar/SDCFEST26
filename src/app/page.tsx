@@ -26,10 +26,6 @@ export default function Home() {
           <InteractiveGalaxy onAbort={() => setMissionStarted(false)} />
         </div>
       )}
-
-      <footer className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[200] text-[8px] font-mono text-white/10 tracking-[1em] pointer-events-none uppercase text-center w-full">
-        INTERSTELLAR SYMPOSIUM EXPLORATION // KONGU ENGINEERING COLLEGE // SOL-224
-      </footer>
     </main>
   );
 }

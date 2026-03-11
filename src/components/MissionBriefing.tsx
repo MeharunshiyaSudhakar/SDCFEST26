@@ -16,7 +16,7 @@ export default function MissionBriefing({ onStart }: { onStart: () => void }) {
         const timer1 = setTimeout(() => setPhase("mission_data"), 1500);
         const timer2 = setTimeout(() => setPhase("awaiting_input"), 4500);
 
-        const targetDate = new Date("March 13, 2026 09:00:00").getTime();
+        const targetDate = new Date("March 17, 2026 09:00:00").getTime();
         const countdownInterval = setInterval(() => {
             const now = new Date().getTime();
             const difference = targetDate - now;
@@ -123,6 +123,31 @@ export default function MissionBriefing({ onStart }: { onStart: () => void }) {
                     </button>
                 </motion.div>
 
+                {/* ABOUT SDC FEST SECTION */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-5xl mb-32 mx-auto text-center space-y-8"
+                >
+                    <div className="flex items-center justify-center gap-4 mb-8">
+                        <div className="h-[1px] w-12 bg-[#00d2ff]/50"></div>
+                        <h2 className="text-2xl md:text-4xl font-orbitron text-[#00d2ff] tracking-[0.5em] uppercase">MISSION ORIGIN</h2>
+                        <div className="h-[1px] w-12 bg-[#00d2ff]/50"></div>
+                    </div>
+                    <p className="text-gray-300 font-mono text-xs md:text-sm leading-8 tracking-[0.2em] uppercase border border-[#00d2ff]/20 bg-black/40 p-10 md:p-16 relative">
+                        <span className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#00d2ff]"></span>
+                        <span className="absolute top-0 right-0 w-4 h-4 border-t border-r border-[#00d2ff]"></span>
+                        <span className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-[#00d2ff]"></span>
+                        <span className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-[#00d2ff]"></span>
+                        SDC Fest '26 is an Interstellar exploration-themed Technical Symposium organized by the Self Development Club of Kongu Engineering College.
+                        <br /><br />
+                        A massive orbital rift has opened in Sector 224, unlocking a hidden quadrant of technological wonders and strategic survival games. From decoding cryptic algorithms in the Cyber Planet to pitching revolutionary ideas in the Startup Planet, you are challenged to assemble your crew, synchronize your neuro-links, and survive the trials.
+                        <br /><br />
+                        Do you have what it takes to explore the stars and return with the ultimate blueprint? Stay sharp... the void is watching.
+                    </p>
+                </motion.div>
+
                 {/* DASHBOARD GRID (BOTTOM ROW) */}
                 <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8 mt-auto">
 
@@ -207,6 +232,20 @@ export default function MissionBriefing({ onStart }: { onStart: () => void }) {
                 </div>
 
             </div>
+
+            {/* SPACED FOOTER FOR MOBILE */}
+            <footer className="w-full py-12 mt-10 text-center flex flex-col items-center justify-center gap-4 bg-black/40 border-t border-white/5 relative z-10 backdrop-blur-md">
+                <div className="w-24 h-[1px] bg-[#00d2ff]/20 mb-4"></div>
+                <p className="text-[#00d2ff] font-orbitron text-[10px] md:text-sm tracking-[0.5em] uppercase">
+                    INTERSTELLAR SYMPOSIUM EXPLORATION
+                </p>
+                <p className="text-white/40 font-mono text-[8px] md:text-[10px] tracking-[0.3em] uppercase">
+                    KONGU ENGINEERING COLLEGE // SOL-224
+                </p>
+                <p className="text-white/20 font-mono text-[8px] tracking-[0.2em] uppercase mt-2">
+                    ALL SYSTEMS NOMINAL
+                </p>
+            </footer>
 
             {/* Cinematic Boot Overlay */}
             <AnimatePresence>
