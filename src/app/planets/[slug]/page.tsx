@@ -103,7 +103,7 @@ export default function PlanetPage({ params }: { params: Promise<{ slug: string 
                                     </div>
                                     <div className="space-y-1">
                                         <span className="text-[#00d2ff] font-mono text-[10px] block opacity-50 uppercase tracking-widest">LANDING PAD</span>
-                                        <span className="text-2xl font-orbitron text-white">{planet.venue}</span>
+                                        <span className="text-2xl font-orbitron text-white">[ ENCRYPTED ]</span>
                                     </div>
                                 </div>
                             </div>
@@ -138,6 +138,13 @@ export default function PlanetPage({ params }: { params: Promise<{ slug: string 
                             <motion.button
                                 whileHover={{ scale: 1.02, backgroundColor: "#00d2ff", color: "#000", boxShadow: "0 0 50px #00d2ff" }}
                                 whileTap={{ scale: 0.98 }}
+                                onClick={() => {
+                                    if (planet.link && planet.link !== "#") {
+                                        window.open(planet.link, "_blank");
+                                    } else {
+                                        alert("REGISTRATION INTERCEPTED: DATA ENCRYPTED. ACCESS GRANTED SOON.");
+                                    }
+                                }}
                                 className="w-full py-6 bg-transparent border border-[#00d2ff] text-[#00d2ff] font-orbitron text-xl font-black rounded uppercase tracking-[0.5em] transition-all"
                             >
                                 🛰 INITIATE MISSION
