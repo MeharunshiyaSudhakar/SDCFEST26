@@ -15,7 +15,7 @@ export default function InteractiveGalaxy({ onAbort }: { onAbort: () => void }) 
     const [isWarping, setIsWarping] = useState(false);
     const cameraRef = useRef<any>(null!);
 
-    const handleSelectPlanet = (planetPos: number[], route: string) => {
+    const handleSelectPlanet = (planetPos: number[], link: string) => {
         setIsWarping(true);
 
         // Zoom toward the planet first
@@ -26,15 +26,22 @@ export default function InteractiveGalaxy({ onAbort }: { onAbort: () => void }) 
             duration: 2,
             ease: "power3.inOut",
             onComplete: () => {
-                // Trigger atmospheric entry UI
+                // Open link directly
                 setTimeout(() => {
-                    window.location.href = route;
+                    if (link && link !== "#") {
+                        window.open(link, "_blank");
+                    } else {
+                        alert("REGISTRATION INTERCEPTED: DATA ENCRYPTED. ACCESS GRANTED SOON.");
+                    }
+                    // Reset warping state to allow selecting others
+                    setIsWarping(false);
                 }, 1000);
             }
         });
 
-        // Fade out world elements
+        // Optional: fade HUD back in after a while
         gsap.to(".hud-controls", { opacity: 0, duration: 0.5 });
+        gsap.to(".hud-controls", { opacity: 1, duration: 0.5, delay: 3 });
     };
 
     return (

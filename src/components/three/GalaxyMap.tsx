@@ -14,7 +14,7 @@ import * as THREE from "three";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 
-function Planet({ position, title, route, color, type, onSelect }: any) {
+function Planet({ position, title, link, color, type, onSelect }: any) {
     const meshRef = useRef<THREE.Mesh>(null!);
     const [hovered, setHovered] = useState(false);
     const router = useRouter();
@@ -27,7 +27,7 @@ function Planet({ position, title, route, color, type, onSelect }: any) {
     });
 
     const handlePlanetClick = () => {
-        onSelect(position, route);
+        onSelect(position, link);
     };
 
     return (
@@ -161,6 +161,7 @@ export default function GalaxyMap({ planets, onSelectPlanet }: any) {
                     title={data.title}
                     type={data.type}
                     color={data.color}
+                    link={data.link}
                     onSelect={onSelectPlanet}
                 />
             ))}

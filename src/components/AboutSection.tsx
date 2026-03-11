@@ -27,10 +27,10 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-center"
             >
-                <h2 className="text-5xl font-creepster text-neon-red mb-8 tracking-widest">The Upside Down Symposium</h2>
-                <p className="font-orbitron text-xl leading-loose text-gray-300 max-w-4xl mx-auto bg-glass p-8 rounded-lg shadow-[0_0_20px_#ff003c22]">
-                    A mysterious rift has opened leading to an alternate dimension of technology and games.
-                    Brave the elements, present your ideas, and survive the trials to win the grand prize. Keep your flashlights on... the Demogorgon is near.
+                <h2 className="text-5xl font-orbitron text-neon-blue mb-8 tracking-[0.5em] uppercase">Interstellar Symposium</h2>
+                <p className="font-orbitron text-xl leading-loose text-gray-300 max-w-4xl mx-auto bg-glass p-8 rounded-lg shadow-[0_0_20px_#00d2ff22]">
+                    A massive rift has opened in Sector 224, leading to an unknown quadrant of technology and discovery.
+                    Assemble your crew, synchronize your neuro-links, and survive the trials to return with the ultimate blueprint. Stay sharp... the void is watching.
                 </p>
             </motion.div>
 
@@ -40,8 +40,8 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-4xl font-orbitron text-neon-blue mb-12 flex items-center justify-center gap-4">
-                    <Calendar className="text-neon-blue" size={40} /> Timeline
+                <h2 className="text-4xl font-orbitron text-neon-blue mb-12 flex items-center justify-center gap-4 uppercase tracking-widest">
+                    <Calendar className="text-neon-blue" size={40} /> Mission Timeline
                 </h2>
                 <div className="relative border-l-4 border-neon-blue ml-4 md:ml-1/2 md:translate-x-[-2px] space-y-12">
                     {schedule.map((item, idx) => (
@@ -55,8 +55,8 @@ export default function AboutSection() {
                         >
                             <div className="absolute left-[-12px] md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-[#050505] border-4 border-neon-blue rounded-full z-10 shadow-[0_0_15px_#00f3ff]"></div>
                             <div className="bg-glass p-6 w-[90%] md:w-5/12 border border-[#00f3ff55] rounded-md hover:shadow-[0_0_20px_#00f3ff55] transition-shadow ml-6 md:ml-0">
-                                <span className="text-neon-red font-orbitron text-lg block mb-2">{item.time}</span>
-                                <h3 className="text-xl font-bold font-orbitron text-white">{item.title}</h3>
+                                <span className="text-neon-red font-orbitron text-lg block mb-2 uppercase tracking-widest">{item.time}</span>
+                                <h3 className="text-xl font-bold font-orbitron text-white uppercase tracking-wider">{item.title}</h3>
                             </div>
                         </motion.div>
                     ))}
@@ -69,8 +69,8 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-4xl font-orbitron text-neon-purple mb-12 flex items-center justify-center gap-4">
-                    <Users className="text-neon-purple" size={40} /> Organizers
+                <h2 className="text-4xl font-orbitron text-neon-purple mb-12 flex items-center justify-center gap-4 uppercase tracking-widest">
+                    <Users className="text-neon-purple" size={40} /> Sector Command
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {organizers.map((org, i) => (
@@ -85,8 +85,8 @@ export default function AboutSection() {
                                 <img src={org.image} alt={org.name} className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" />
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#9d00ff55] opacity-50 block mix-blend-screen group-hover:animate-pulse"></div>
                             </div>
-                            <h3 className="text-2xl font-orbitron text-white mb-2">{org.name}</h3>
-                            <p className="text-neon-purple font-retro">{org.role}</p>
+                            <h3 className="text-2xl font-orbitron text-white mb-2 uppercase tracking-widest">{org.name}</h3>
+                            <p className="text-neon-purple font-mono uppercase tracking-widest text-xs">{org.role}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -99,17 +99,17 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-center"
             >
-                <h2 className="text-4xl font-orbitron text-neon-orange mb-12 flex items-center justify-center gap-4">
-                    <MapPin className="text-neon-orange" size={40} /> Target Location coordinates
+                <h2 className="text-4xl font-orbitron text-neon-orange mb-12 flex items-center justify-center gap-4 uppercase tracking-widest">
+                    <MapPin className="text-neon-orange" size={40} /> Signal Origin Coordinates
                 </h2>
-                <div className="w-full h-[400px] border border-neon-orange bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] bg-glass rounded-xl shadow-[0_0_30px_#ff5e00] flex items-center justify-center flex-col relative overflow-hidden">
+                <div className="w-full h-[400px] border border-neon-orange bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] bg-glass rounded-xl shadow-[0_0_30_#ff5e0044] flex items-center justify-center flex-col relative overflow-hidden">
                     {/* Radar effect */}
                     <div className="absolute w-[800px] h-[800px] border border-neon-orange/20 rounded-full animate-ping opacity-20"></div>
                     <div className="absolute w-[400px] h-[400px] border border-neon-orange/40 rounded-full animate-ping opacity-40" style={{ animationDelay: '0.5s' }}></div>
 
                     <MapPin size={60} className="text-neon-orange animate-bounce drop-shadow-[0_0_15px_#ff5e00] z-10" />
-                    <h3 className="text-2xl font-orbitron z-10 mt-6 tracking-widest text-shadow-[0_0_10px_#ffffff]">Hawkins National Laboratory</h3>
-                    <p className="text-gray-400 font-retro mt-4 z-10">[ restricted access ]</p>
+                    <h3 className="text-2xl font-orbitron z-10 mt-6 tracking-[0.5em] text-shadow-[0_0_10px_#ffffff] uppercase text-white">[ Coordinates Encrypted ]</h3>
+                    <p className="text-[#ff5e00] font-mono mt-4 z-10 tracking-[0.3em] uppercase text-xs animate-pulse">Transmission Pending...</p>
                 </div>
             </motion.div>
         </div>

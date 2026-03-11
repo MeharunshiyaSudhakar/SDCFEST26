@@ -91,14 +91,10 @@ export default function EventPage({ params }: { params: Promise<{ slug: string }
                         <p className="text-2xl font-orbitron text-gray-300 leading-relaxed tracking-wider">
                             {event.description}
                         </p>
-                        <div className="flex gap-4 pt-4 border-t border-white/5">
-                            <div className="flex-1">
-                                <span className="text-gray-500 font-orbitron text-xs block mb-1">CHRONO COORD</span>
-                                <span className="text-xl font-orbitron text-white">{event.time}</span>
-                            </div>
-                            <div className="flex-1">
-                                <span className="text-gray-500 font-orbitron text-xs block mb-1">LOC COORD</span>
-                                <span className="text-xl font-orbitron text-white">{event.venue}</span>
+                        <div className="flex justify-center pt-4 border-t border-white/5">
+                            <div className="text-center">
+                                <span className="text-gray-500 font-orbitron text-xs block mb-1">TIME HORIZON</span>
+                                <span className="text-xl font-orbitron text-white uppercase tracking-widest">{event.time}</span>
                             </div>
                         </div>
                     </div>
@@ -134,6 +130,13 @@ export default function EventPage({ params }: { params: Promise<{ slug: string }
                     <motion.button
                         whileHover={{ scale: 1.05, boxShadow: `0 0 50px ${event.color}` }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={() => {
+                            if (event.link && event.link !== "#") {
+                                window.open(event.link, "_blank");
+                            } else {
+                                alert("REGISTRATION INTERCEPTED: DATA ENCRYPTED. ACCESS GRANTED SOON.");
+                            }
+                        }}
                         className="w-full py-6 uppercase tracking-[0.5em] font-orbitron text-2xl font-black rounded-lg transition-all"
                         style={{
                             backgroundColor: `${event.color}11`,
