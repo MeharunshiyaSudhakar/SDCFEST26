@@ -26,7 +26,7 @@ export default function FooterScene() {
             </motion.h2>
 
             <div className="absolute bottom-10 left-0 w-full text-center text-xs font-mono text-gray-500">
-                © {new Date().getFullYear()} Upside Down Symposium. All reality streams reserved.
+                © {new Date().getFullYear()} SDC Fest'26. All reality streams reserved.
             </div>
         </div>
     );

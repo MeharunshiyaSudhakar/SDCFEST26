@@ -27,11 +27,8 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 className="text-center"
             >
-                <h2 className="text-5xl font-orbitron text-neon-blue mb-8 tracking-[0.5em] uppercase">Interstellar Symposium</h2>
-                <p className="font-orbitron text-xl leading-loose text-gray-300 max-w-4xl mx-auto bg-glass p-8 rounded-lg shadow-[0_0_20px_#00d2ff22]">
-                    A massive rift has opened in Sector 224, leading to an unknown quadrant of technology and discovery.
-                    Assemble your crew, synchronize your neuro-links, and survive the trials to return with the ultimate blueprint. Stay sharp... the void is watching.
-                </p>
+                <h2 className="text-5xl font-orbitron text-neon-blue mb-8 tracking-[0.5em] uppercase">SDC Symposium</h2>
+                
             </motion.div>
 
             {/* Schedule Timeline */}
@@ -40,9 +37,6 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-4xl font-orbitron text-neon-blue mb-12 flex items-center justify-center gap-4 uppercase tracking-widest">
-                    <Calendar className="text-neon-blue" size={40} /> Mission Timeline
-                </h2>
                 <div className="relative border-l-4 border-neon-blue ml-4 md:ml-1/2 md:translate-x-[-2px] space-y-12">
                     {schedule.map((item, idx) => (
                         <motion.div
