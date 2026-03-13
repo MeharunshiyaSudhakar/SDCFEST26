@@ -15,7 +15,7 @@ export const eventsData = {
         time: "Stardate: Day 1, 01:00 PM",
         theme: "tech",
         color: "#ff5e00",
-        link: "#"
+        link: "https://forms.gle/5ZhURrE1Q5cfuKBX9"
     },
     code: {
         title: "Code Clash",

@@ -21,7 +21,7 @@ export const planetsData = {
         color: "#ffcc00",
         position: [-10, 5, -15],
         description_long: "A massive industrial world where machines never sleep. Its core is made of pure cold-rolled titanium.",
-        link: "#"
+        link: "https://forms.gle/5ZhURrE1Q5cfuKBX9"
     },
     code_clash: {
         title: "Code Clash",
