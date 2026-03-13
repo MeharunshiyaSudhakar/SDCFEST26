@@ -57,7 +57,7 @@ export const planetsData = {
         color: "#ff00ff",
         position: [0, -10, -5],
         description_long: "A planet where information flows through the atmosphere itself. One must be truly connected to survive here.",
-        link: "#"
+        link: "https://forms.gle/62LaZ6gUyfc6LTsg8"
     },
     treasure_hunt: {
         title: "Treasure Hunt",

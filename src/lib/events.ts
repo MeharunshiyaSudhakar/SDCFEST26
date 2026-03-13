@@ -42,7 +42,7 @@ export const eventsData = {
         time: "Stardate: Day 2, 11:00 AM",
         theme: "non-tech",
         color: "#9d00ff",
-        link: "#"
+        link: "https://forms.gle/62LaZ6gUyfc6LTsg8"
     },
     treasure: {
         title: "Treasure Hunt",
