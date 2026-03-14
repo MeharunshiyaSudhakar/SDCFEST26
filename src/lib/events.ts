@@ -44,15 +44,6 @@ export const eventsData = {
         color: "#9d00ff",
         link: "https://forms.gle/62LaZ6gUyfc6LTsg8"
     },
-    treasure: {
-        title: "Treasure Hunt",
-        description: "Navigate the school grounds following encrypted clues. Beware of the shadows.",
-        rules: ["Crew size: 4", "Mobile comms allowed once", "Time limit: 3 hours"],
-        time: "Stardate: Day 2, 02:00 PM",
-        theme: "non-tech",
-        color: "#ffff00",
-        link: "https://forms.gle/cJHPfUkwKX6dQZYo8"
-    },
     sharktank: {
         title: "Shark Tank",
         description: "Pitch your startup concept to the investors of the Upside Down.",

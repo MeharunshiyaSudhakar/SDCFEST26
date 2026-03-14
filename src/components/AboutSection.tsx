@@ -8,7 +8,7 @@ export default function AboutSection() {
         { time: "09:00 AM", title: "Inauguration / Portal Opens", type: "tech" },
         { time: "10:30 AM", title: "Code Clash (Round 1)", type: "tech" },
         { time: "12:00 PM", title: "Shark Tank & Project Presentation", type: "mixed" },
-        { time: "02:00 PM", title: "Treasure Hunt & IPL Auction", type: "non-tech" },
+        { time: "02:00 PM", title: "IPL Auction", type: "non-tech" },
         { time: "04:30 PM", title: "Valedictory / Dimension Closes", type: "mixed" }
     ];
 

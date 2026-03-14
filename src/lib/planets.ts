@@ -59,18 +59,6 @@ export const planetsData = {
         description_long: "A planet where information flows through the atmosphere itself. One must be truly connected to survive here.",
         link: "https://forms.gle/62LaZ6gUyfc6LTsg8"
     },
-    treasure_hunt: {
-        title: "Treasure Hunt",
-        slug: "treasure",
-        type: "Adventure Planet",
-        description: "An ancient civilization left behind a treasure beyond imagination. Solve the artifacts to claim it.",
-        rules: ["Full crew (4 members)", "GPS / HUD tracking enabled", "Time limit: 3 standard hours"],
-        time: "Stardate: Day 2, 02:00 PM",
-        color: "#ffff00",
-        position: [18, -4, 10],
-        description_long: "Filled with ruins, mysterious maps, and long-forgotten codes hidden in plain sight.",
-        link: "https://forms.gle/cJHPfUkwKX6dQZYo8"
-    },
     shark_tank: {
         title: "Shark Tank",
         slug: "sharktank",
